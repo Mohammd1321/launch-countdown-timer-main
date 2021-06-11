@@ -1,13 +1,14 @@
-*,*::after,*::before {
+*,
+*::after,
+*::before {
   margin: 0px;
   padding: 0px;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: "Red Hat Text", sans-serif;
   font-weight: 700;
 }
-
 
 html {
   font-size: 14px;
@@ -21,10 +22,10 @@ html {
   --almost-black: hsl(240, 14%, 10%);
 }
 
-
 body {
   height: 100vh;
-  background: url('../images/pattern-hills.svg') bottom left/ 100%, url('../images/bg-stars.svg')  bottom 300px left / 2000px  ;
+  background: url("./images/pattern-hills.svg") bottom left/ 100%,
+    url("./images/bg-stars.svg") bottom 300px left / 2000px;
   background-repeat: no-repeat;
   background-color: var(--very-dark-blue);
   display: flex;
@@ -33,7 +34,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 
 .timers {
   margin-top: 6rem;
@@ -46,10 +46,9 @@ body {
   margin: 0rem auto 3rem;
 }
 
-
 .time {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   justify-items: center;
   justify-content: center;
@@ -59,21 +58,21 @@ body {
   display: inline-block;
 }
 
-
-h2,span {
+h2,
+span {
   letter-spacing: 8px;
 }
 
 h2 {
   text-align: center;
-  font-size: clamp(1rem,2vw,1.5rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   color: white;
 }
 
 .content {
   color: var(--soft-red);
   position: relative;
-  font-size: clamp(2rem,5vw,4.5rem);
+  font-size: clamp(2rem, 5vw, 4.5rem);
   background-color: var(--dark-blue);
   text-align: center;
   display: flex;
@@ -92,7 +91,7 @@ span {
 }
 
 .overlay-target::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 50%;
@@ -103,11 +102,12 @@ span {
   left: 0px;
   background-color: var(--almost-black);
   z-index: 1;
-  opacity: .4;
+  opacity: 0.4;
 }
 
-.content::after,.content::before {
-  content: '';
+.content::after,
+.content::before {
+  content: "";
   width: 8px;
   height: 16px;
   top: 50%;
@@ -134,7 +134,6 @@ span {
   cursor: pointer;
 }
 
-
 .logo:nth-child(2) {
   margin: 0rem 2rem;
 }
@@ -143,13 +142,10 @@ span {
   fill: var(--soft-red);
 }
 
-
-
-
-
 @media (max-width: 769px) {
   body {
-    background: url('../images/pattern-hills.svg') bottom left/ 100% 200px, url('../images/bg-stars.svg')  bottom 300px left / 2000px  ;
+    background: url("./images/pattern-hills.svg") bottom left/ 100% 200px,
+      url("./images/bg-stars.svg") bottom 300px left / 2000px;
     background-repeat: no-repeat;
     background-color: var(--very-dark-blue);
   }
@@ -164,7 +160,7 @@ span {
     grid-gap: 10px;
   }
   span {
-    font-size: .5rem;
+    font-size: 0.5rem;
     letter-spacing: 5px;
   }
 }
